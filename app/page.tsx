@@ -79,23 +79,31 @@ export default function LandingPage() {
   };
 
   const handleShare = async () => {
+    const url = window.location.href;
     const shareData = {
       title: "직결 - 수수료 0원 행사 매칭 플랫폼",
-      url: window.location.href,
+      url,
     };
+
+    const copyToClipboard = async () => {
+      try {
+        await navigator.clipboard.writeText(url);
+        alert("주소가 복사되었습니다. 단톡방에 붙여넣어 주세요!");
+      } catch {
+        alert("주소 복사에 실패했습니다. 주소를 직접 복사해 주세요.");
+      }
+    };
+
     try {
       if (navigator.share) {
         await navigator.share(shareData);
       } else {
-        await navigator.clipboard.writeText(window.location.href);
-        alert("주소가 복사되었습니다. 단톡방에 붙여넣어 주세요!");
+        await copyToClipboard();
       }
     } catch (err) {
       const isAbort = err instanceof Error && (err as Error).name === "AbortError";
-      if (!isAbort) {
-        console.error(err);
-        alert("공유에 실패했습니다. 주소를 직접 복사해 주세요.");
-      }
+      if (isAbort) return;
+      await copyToClipboard();
     }
   };
 
