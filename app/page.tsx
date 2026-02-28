@@ -20,8 +20,8 @@ function formatPhoneNumber(value: string): string {
 
 const STYLES = {
   label: "block text-[14px] font-semibold text-[#8B95A1] mb-2 ml-1",
-  input: "w-full h-[58px] px-5 rounded-[16px] bg-[#F2F4F6] border-none outline-none focus:bg-[#E8F3F1] focus:ring-2 focus:ring-[#00D0B4]/20 transition-all font-semibold text-[16px] placeholder:text-[#B0B8C1]",
-  select: "w-full h-[58px] px-5 rounded-[16px] bg-[#F2F4F6] border-none outline-none focus:bg-[#E8F3F1] transition-all font-semibold text-[16px] appearance-none cursor-pointer",
+  input: "w-full h-[58px] px-5 rounded-[16px] bg-[#F2F4F6] border-none outline-none focus:bg-[#E8F4FF] focus:ring-2 focus:ring-[#3182F6]/20 transition-all font-semibold text-[16px] placeholder:text-[#B0B8C1]",
+  select: "w-full h-[58px] px-5 rounded-[16px] bg-[#F2F4F6] border-none outline-none focus:bg-[#E8F4FF] transition-all font-semibold text-[16px] appearance-none cursor-pointer",
 } as const;
 
 export default function LandingPage() {
@@ -80,7 +80,7 @@ export default function LandingPage() {
 
   const handleShare = async () => {
     const shareData = {
-      title: "직행 - 수수료 0원 행사 매칭 플랫폼",
+      title: "직결 - 수수료 0원 행사 매칭 플랫폼",
       text: "사장님 3초만에 수수료 0원 혜택에 탑승하세요 !",
       url: window.location.href,
     };
@@ -105,7 +105,7 @@ export default function LandingPage() {
       {/* 토스 스타일의 투명 헤더 */}
       <header className="max-w-md mx-auto px-6 py-5 flex justify-between items-center sticky top-0 bg-white/80 backdrop-blur-xl z-50 border-b border-[#F2F4F6]">
         <h1 className="text-[22px] font-bold tracking-[-0.06em] text-[#191F28]">
-          직행<span className="text-[#00D0B4]">.</span>
+          직결<span className="text-[#3182F6]">.</span>
         </h1>
         <button
           type="button"
@@ -120,17 +120,17 @@ export default function LandingPage() {
       <main className="max-w-md mx-auto px-6 pt-10 pb-24 space-y-12">
         {/* OUR STORY 섹션 */}
         <div className="space-y-4 text-center">
-          <span className="inline-block bg-[#E8F3F1] text-[#00D0B4] text-[13px] font-bold px-3 py-1 rounded-md">
+          <span className="inline-block bg-[#E8F4FF] text-[#3182F6] text-[13px] font-bold px-3 py-1 rounded-md">
             OUR STORY
           </span>
           <h2 className="text-[28px] sm:text-[32px] font-bold leading-[1.35] tracking-[-0.07em] break-keep">
             <span className="text-[#191F28] whitespace-nowrap">에이전시 배불리기는</span><br />
-            <span className="text-[#00D0B4] whitespace-nowrap">이제 끝났습니다.</span>
+            <span className="text-[#3182F6] whitespace-nowrap">이제 끝났습니다.</span>
           </h2>
           <p className="text-[#4E5968] text-[15px] sm:text-[17px] leading-[1.6] font-medium break-keep">
             행사 한 번 뛸 때마다 가져가던 수수료.<br />
             고인물들끼리의 일거리 돌려먹기.<br />
-            <span className="text-[#00D0B4] font-bold">직행</span>은 모두에게 정당한 구조를 만들고 싶습니다.
+            <span className="text-[#3182F6] font-bold">직결</span>은 모두에게 정당한 구조를 만들고 싶습니다.
           </p>
         </div>
 
@@ -138,16 +138,16 @@ export default function LandingPage() {
         <div className="bg-white p-7 rounded-[28px] border border-[#F2F4F6] space-y-5">
           <h3 className="text-[16px] sm:text-[18px] font-bold text-[#191F28] flex items-center gap-2 flex-wrap break-keep">
             <span>🔥</span>
-            <span className="text-[#00D0B4] text-[1.2em] font-bold leading-none align-middle mr-[-0.22em]">직행</span><span className="tracking-[-0.18em]">은</span> 현장에서 뛰어본 사람들이 만듭니다
+            <span className="text-[#3182F6] text-[1.2em] font-bold leading-none align-middle mr-[-0.22em]">직결</span><span className="tracking-[-0.18em]">은</span> 현장에서 뛰어본 사람들이 만듭니다
           </h3>
           <p className="text-[14px] sm:text-[15px] text-[#4E5968] leading-[1.65] font-medium break-keep">
             행사 바닥에서 직접 매대를 펴고 현장을 뛰었습니다. 새벽부터 재료를 준비하고, 더위와 추위를 버티며 일한 수익의 일부를 전화 몇 통 돌린 에이전시가 가져가는 것을 보며 뼈저리게 느꼈습니다.
           </p>
-          <strong className="block text-center text-[#00D0B4] font-bold text-[15px] sm:text-[17px] break-keep">
+          <strong className="block text-center text-[#3182F6] font-bold text-[15px] sm:text-[17px] break-keep">
             "땀 흘린 사장님이 온전히 돈을 버는 구조를 만들자."
           </strong>
           <p className="text-[14px] sm:text-[15px] text-[#4E5968] leading-[1.65] font-medium break-keep">
-            이것이 직행의 철학입니다.
+            이것이 직결의 철학입니다.
           </p>
         </div>
 
@@ -164,7 +164,7 @@ export default function LandingPage() {
               <button 
                 type="button"
                 onClick={handleShare}
-                className="w-full bg-[#00D0B4] text-white font-bold py-[18px] rounded-[18px] active:scale-[0.97] transition-all text-[18px]"
+                className="w-full bg-[#3182F6] hover:bg-[#1B64DA] text-white font-bold py-[18px] rounded-[18px] active:scale-[0.97] transition-all text-[18px]"
                 aria-label="주변 사장님께 링크 공유하기"
               >
                 🤝 주변 사장님께 공유하기
@@ -174,7 +174,7 @@ export default function LandingPage() {
             <div className="space-y-8">
               <h3 className="text-[20px] sm:text-[24px] font-bold text-center leading-tight break-keep">
                 <span className="whitespace-nowrap">수수료 0원 행사 매칭,</span><br/>
-                <span className="text-[#00D0B4] whitespace-nowrap">지금 바로 탑승하세요 🚀</span>
+                <span className="text-[#3182F6] whitespace-nowrap">지금 바로 탑승하세요 🚀</span>
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -252,7 +252,7 @@ export default function LandingPage() {
                   type="submit"
                   disabled={isSubmitting}
                   aria-busy={isSubmitting}
-                  className="w-full h-[64px] bg-[#00D0B4] hover:bg-[#00BAA1] text-white font-bold text-[18px] rounded-[20px] mt-8 shadow-sm active:scale-[0.98] transition-all disabled:opacity-50"
+                  className="w-full h-[64px] bg-[#3182F6] hover:bg-[#1B64DA] text-white font-bold text-[18px] rounded-[20px] mt-8 shadow-sm active:scale-[0.98] transition-all disabled:opacity-50"
                 >
                   {isSubmitting ? "전송 중..." : "0원 혜택 탑승하기 🚀"}
                 </button>
@@ -263,7 +263,7 @@ export default function LandingPage() {
         
         {/* 푸터 */}
         <p className="pt-10 text-center text-[#B0B8C1] text-[13px] font-semibold tracking-widest uppercase">
-          © 2026 직행. All rights reserved.
+          © 2026 직결. All rights reserved.
         </p>
       </main>
     </div>
