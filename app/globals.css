@@ -10,7 +10,6 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,10 +19,27 @@
   }
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* 모바일 터치: 300ms 지연 제거, 탭 하이라이트 제어 */
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* 한글 줄바꿈 최적화 (모바일) */
